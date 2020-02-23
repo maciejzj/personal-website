@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+	<meta charset="utf-8">
+
+	<title>Maciej Ziaja</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+<header>
+<nav>
+	<strong>Maciej Ziaja</strong>&nbsp;
+	<a href="./index.html">home</a>&nbsp;
+	<a href="./portfolio.html">portfolio</a>&nbsp;
+	-&nbsp;
+	<a href="https://github.com/maciejzj">github</a>&nbsp;
+	<a href="https://gitlab.com/maciejzj">gitlab</a>&nbsp;
+	<a href="https://www.linkedin.com/in/maciej-ziaja-86a422184/">linkedin</a>&nbsp;
+	<a href="mailto:maciejzj@icloud.com">email</a>
+</nav>
+</header>
+
+<h1 id="simple-static-blogger">Simple static blogger</h1>
+<p>I decided to create this website to share my tech related work. However I discovered that the mainstream tools for blogging are not so great if you want to make a very simple and effortless website. Popular tools often seem to be too convoluted (there are Hugo tutorials on the youtube that last dozens of minutes) for my use case. Surely, there are many great tools, but I wanted something barebone simple that would require no learning and have as few dependencies as possible. After a few minutes of research I decided to write my own blog framework in form of a shell script (there are some bash static site generators but I decided to make something even simpler and make my own thing for fun).</p>
+<p>This was my motivation for creating a simple static blogger - anti-framework for generating static sites and blogs that tries to follow suckless philosophy of creating software.</p>
+<h2 id="generated-site-structure">Generated site structure</h2>
+<pre><code>+------------------------------+
+| Header and navbar            |
++------------------------------+
+|                              |
+|                              |
+| Body written in Markdown     |
+|                              |
+|                              |
++------------------------------+
+|                              |
+| List of posts                |
+|                              |
++------------------------------+
+| Footer                       |
++------------------------------+</code></pre>
+<h2 id="jump-start">Jump start</h2>
+<ol type="1">
+<li>A POSIX compliant shell and your favourite markdown renderer (pandoc by default) are required.</li>
+<li>Download ssb and place it in your <code>PATH</code> or inside your blog directory.</li>
+<li>Run <code>ssb -g</code> to generate html and css templates. Adjust the header and the footer to your liking, you can customize the stylesheet, use a css theme, or your favourite style for markdown.</li>
+<li>Write your index.md page and posts in <code>posts</code> directory.</li>
+<li>Run <code>ssb index.md</code> to generate <code>html</code> files. Ssb will append header, list of posts and footer to each file.</li>
+<li>The timestamps near posts titles are generated from modification dates of markdown files. If you wish to change them use <code>touch -d</code> command on them.</li>
+<li>Publish your blog.</li>
+</ol>
+<h2 id="goals-features-and-non-features">Goals, features and non-features</h2>
+<ul>
+<li>Ssb is a single POSIX compliant script that requires only a markdown renderer to create blogs.</li>
+<li>It is not a <em>real framework</em>, just a hackable script to automate blogging and save your time.</li>
+<li>Useful as is without editing source, easily expandable source if you want.</li>
+<li>No tags, no artifacts, no javascript, no learning, no lengthy setup.</li>
+<li>If you want a simple and effortless blogging engine ssb is perfect for you, whether you want something more features you can hack it, or use something more advanced like Jekyll or Hugo.</li>
+<li>Customization with direct editing of html header, footer and css stylesheet.</li>
+</ul>
+<h2 id="help">Help</h2>
+<pre><code>./ssb -h
+Usage: ./ssb [-d|-g|-h|-r] [-e HEADER_PATH] [-f FOOTER_PATH] [-m MD_RENDERER]
+                           [-o OUTPUT_DIR] [-p POSTS_DIR]</code></pre>
+<h2 id="how-to-get-it">How to get it</h2>
+<p>If you want to give ssb a try you can get it from the github <a href="https://github.com/MaciejZj/ssb">repo</a>.</p>
+<hr />
+<p>2020-02-23 – <a href="ssb-simple-static-blogger.html">Simple static blogger</a><br></p>
+<footer>
+	Created with <a href="https://github.com/MaciejZj/ssb">ssb</a> – a simple
+	static blogger.
+</footer>
+</body>
+</html>
