@@ -1,72 +1,37 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono&display=swap');
-body {
-	font-family: 'Roboto Mono', sans-serif;
-	font-family: 'Roboto', monospace;
-	max-width: 40em;
-	margin: auto;
-	padding: 1.5em;
-}
-header { font-size: 1.1em; }
-footer { margin-top: 1.5em; text-align: right; }
-nav { margin-bottom: 1.5em; padding-bottom: 0.5em; }
-h1 { margin: 0.5em 0em; }
-h2 { margin: 0.6em 0em; }
-h3 { margin: 0.7em 0em; }
-h4 { font-size: 1em; margin: 0.8em 0em; }
-h5 { font-size: 1em; margin: 0.8em 0em; }
-h6 { font-size: 1em; margin: 0.8em 0em; }
-p {
-	line-height: 1.5em;
-	text-align: justify;
-	hyphens: auto;
-	text-justify: inter-word;
-	overflow-wrap: break-word;
-	margin: 0.5em 0 0.5em 0;
-}
-a { color: #414af0; text-decoration-thickness: 0.08em; }
-li { line-height: 1.5em;}
-ul { padding-left: 3em; }
-ol { padding-left: 3em; }
-dl { line-height: 1.5em; }
-dt { font-weight: bold; }
-dd { font-style: italic; }
-hr { border: solid 0.05em; margin: 1.5em 0em; }
-figure { margin: 0.5em 0; }
-figcaption { padding: 0.5em; }
-img { margin: 1em; }
-video { margin; 1em; }
-table { border-collapse: collapse; }
-tr { background-color: white;
-}
-tr:nth-child(2n) { background-color: #f9f9f9; }
-th {
-	font-weight: bold;
-	border: 0.08em solid #bfbfbf;
-	padding: 0.5em 1em;
-}
-td {
-	border: 0.08em solid #bfbfbf;
-	padding: 0.5em 1em;
-}
-blockquote {
-	padding: 0 1em;
-	color: #646464;
-	border-left: 0.25em solid #bfbfbf;
-}
-pre {
-	background-color: #f9f9f9;
-	border: 0.1em solid #bfbfbf;
-	padding: 0.5em 0.8em;
-	border-radius: 0.2em;
-}
+body { color: white; max-width: 40em; margin: auto; padding: 1.5em; background-image: url('https://cdnb.artstation.com/p/assets/images/images/015/081/493/large/victor-abramovskiy-orcar-02.jpg?1546980798');   background-repeat: no-repeat; background-size: cover;
+  background-attachment: fixed; }
+header { font-size: 1.2em; }
+footer { text-align: right; }
+nav { }
+h1 { }
+h2 { }
+h3 { }
+h4 { }
+h5 { }
+h6 { }
+p { }
+a { color: white; }
+li { }
+ul { }
+dl { }
+dt { }
+dd { }
+hr { }
+figure { }
+figcaption { }
+img { }
+video { }
+table { }
+th, td { }
+blockquote { }
 
 img, video { width: 100%; }
-pre { max-width: 100%; overflow-x: auto; }
+pre { width: 100%; overflow-x: auto; }
 table{ max-width: 100%; overflow-x: auto; display: block; }
 
 @media only screen and (max-width: 600px)
 {
-	body { }
+	body { overflow: scroll; }
 }
 
 code span.al { color: #ff0000; font-weight: bold; }
