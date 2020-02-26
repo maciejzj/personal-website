@@ -39,7 +39,7 @@ Used technologies:
 * Tensorflow and Keras combo for deep learning.
 
 Source available at
-[github](https://github.com/maciejzj/copper-grains-classification).
+[GitHub](https://github.com/maciejzj/copper-grains-classification).
 
 ## Project Based Learnig – ATV with semi-active suspension system
 
