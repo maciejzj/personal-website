@@ -1,4 +1,5 @@
-Interested in embedded software, machine learning and computer vision with C++ and Python.
+Interested in embedded software, machine learning and computer vision with
+modern C++ and Python.
 
 <pre style="background-color: transparent; border-style: none;">
              &&
@@ -18,4 +19,4 @@ Interested in embedded software, machine learning and computer vision with C++ a
             {
 </pre>
 
-See my [dotfiles](https://github.com/MaciejZj/dotfiles) on github.
+See my [dotfiles](https://github.com/MaciejZj/dotfiles) on GitHub.

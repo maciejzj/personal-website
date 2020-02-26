@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono&display=swap');
 body {
-	font-family: 'Roboto Mono', sans-serif;
-	font-family: 'Roboto', monospace;
+ 	font-family: -apple-system, "BlinkMacSystemFont",
+	"Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif,
+	"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	max-width: 40em;
 	margin: auto;
 	padding: 1.5em;
@@ -66,7 +67,7 @@ table{ max-width: 100%; overflow-x: auto; display: block; }
 
 @media only screen and (max-width: 600px)
 {
-	body { }
+	body { font-size: 0.9em; }
 }
 
 code span.al { color: #ff0000; font-weight: bold; }
