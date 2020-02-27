@@ -92,7 +92,7 @@ Used technologies:
 * Custom chassis design with Autodesk Fusion 360.
 * Embedded control system for DC motors velocity synchronisation and nested
   feedback loop making the robot act like a custom servomechanism.
-* Modelling and identification o DC motors.
+* Modelling and identification of DC motors.
 
 Source available [GitHub](https://github.com/maciejzj/maze-bot)
 
