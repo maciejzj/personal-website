@@ -94,7 +94,7 @@ Used technologies:
   feedback loop making the robot act like a custom servomechanism.
 * Modelling and identification of DC motors.
 
-Source available [GitHub](https://github.com/maciejzj/maze-bot)
+Source available [GitHub](https://github.com/maciejzj/maze-bot).
 
 ## Pi Observer
 
@@ -113,7 +113,7 @@ Used technologies:
 * Python for database access and hardware control.
 * Full web stack and web server.
 
-Source avaible at [GitHub](https://github.com/maciejzj/maze-bot)
+Source avaible at [GitHub](https://github.com/maciejzj/maze-bot).
 
 ## Other small software
 
