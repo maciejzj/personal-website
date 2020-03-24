@@ -75,8 +75,9 @@ This means that after you press ctrl+n Vim will autocomplete given word using
 contents of the file you are editing.
 This is obviously very primitive and language agnostic.
 
-One step further is a built-in Vim plugin called omni completion that is a
-rather simple way to get anyhow smart completion.
+One step further is a built-in Vim plugin called
+[omni completion](https://vim.fandom.com/wiki/Omni_completion)
+that is a rather simple way to get anyhow smart completion.
 You enable it with `filetype plugin on` and
 `set omnifunc=syntaxcomplete#Complete` in your `.vimrc`.
 Omni completion is language aware but it's far worse than what you can get in a
@@ -89,7 +90,7 @@ tags and navigate code with motions like `ctr+[`.
 However omni completion isn't that great and still requires you to invoke it
 manually when you want to complete.
 
-### Advance completion before LSP
+### Advanced completion before LSP
 
 Since omni completion some more advanced autocompletion plugins have been
 developed.
