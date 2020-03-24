@@ -31,10 +31,10 @@ ol { padding-left: 3em; }
 dl { line-height: 1.5em; }
 dt { font-weight: bold; }
 dd { font-style: italic; }
-hr { border: solid 0.05em; margin: 1.5em 0em; }
-figure { margin: 0.5em 0; }
-figcaption { padding: 0.5em; }
-img { margin: 1em; }
+hr { border: solid 0.5px; margin: 1.5em 0em; }
+figure { margin: 0.5em 0; padding: 0.5em; }
+figcaption { padding-top: 0.5em; font-style : italic; }
+img { }
 video { margin; 1em; }
 table { border-collapse: collapse; }
 tr { background-color: white;
