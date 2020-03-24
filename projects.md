@@ -1,7 +1,7 @@
 # Projects
 
 My personal projects are available at my GitHub.
-Colaborative works can be found at my GitLab.
+Collaborative works can be found at my GitLab.
 
 ## EPS system in the CubeSat standard
 
@@ -41,7 +41,7 @@ Used technologies:
 Source available at
 [GitHub](https://github.com/maciejzj/copper-grains-classification).
 
-## Project Based Learnig – ATV with semi-active suspension system
+## Project Based Learning – ATV with semi-active suspension system
 
 *October 2019*
 
@@ -113,7 +113,7 @@ Used technologies:
 * Python for database access and hardware control.
 * Full web stack and web server.
 
-Source avaible at [GitHub](https://github.com/maciejzj/maze-bot).
+Source available at [GitHub](https://github.com/maciejzj/maze-bot).
 
 ## Other small software
 

@@ -4,8 +4,8 @@ I decided to create this website to share my tech related work.
 However I discovered that the mainstream tools for blogging are not so great
 if you want to make a very simple and effortless website.
 Popular tools often seem to be too convoluted (there are Hugo tutorials on the
-youtube that last dozens of minutes) for my use case.
-Surely, there are many great tools, but I wanted something barebone simple that
+Youtube that last dozens of minutes) for my use case.
+Surely, there are many great tools, but I wanted something bare-bones simple that
 would require no learning and have as few dependencies as possible.
 After a few minutes of research I decided to write my own blog framework in form
 of a shell script (there are some bash static site generators
@@ -62,7 +62,7 @@ post.
 * It is not a *real framework*, just a hackable script to automate blogging and
   save your time.
 * Useful as is without editing source, easily expandable source if you want.
-* No tags, no artifacts, no javascript, no learning, no lengthy setup.
+* No tags, no artifacts, no Javascript, no learning, no lengthy setup.
 * If you want a simple and effortless blogging engine ssb is perfect for you,
   whether you want something with more features you can hack it, or use
   frameworks like Jekyll or Hugo.
@@ -78,7 +78,7 @@ Usage: ./ssb [-d|-g|-h|-r] [-e HEADER_PATH] [-f FOOTER_PATH] [-m MD_RENDERER]
 
 ## How to get it
 
-If you want to give ssb a try you can get it from the github
+If you want to give ssb a try you can get it from the GitHub
 [repo](https://github.com/MaciejZj/ssb).
 
 Stylesheets for theming can be found
