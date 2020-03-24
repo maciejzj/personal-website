@@ -17,7 +17,7 @@ them.
 
 ![Four examples of Vim LSP features with Python and C++](https://github.com/maciejzj/website/blob/master/media/vim-lsp-and-autocompletion-overview.png?raw=true)
 
-## Tldr; if you just want ide like autocompletion
+## Tldr; if you just want IDE like autocompletion
 
 The explanation of the setup and overview of different methods of getting
 autocompletion is quite lengthy so if you want to get LSP working quickly
@@ -106,7 +106,7 @@ As mentioned they are not standardised and seem too big.
 I have used youcompleteme before and it wasn't bad but if you search for a
 while you can find bunch of people struggling with it's performance.
 
-### Lsp – state of art in autocompletion
+### LSP – state of art in autocompletion
 
 However in 2016 Microsoft announced their Language Server Protocol that would
 heavily impact future of Vim (yeah irony) and many other text editors.
@@ -124,7 +124,7 @@ Using LSP you can choose which language servers you want to use and you your
 editor is not strictly bound to the way it gets code analysis.
 Other advantage of LSP is that you can easily switch servers for different
 languages so your not bound to a single program.
-With Lsp you can get rich autocompletion, code navigation, refactoring, hovers
+With LSP you can get rich autocompletion, code navigation, refactoring, hovers
 and even more with great setup flexibility.
 
 This idea was soon incorporated into Vim and now we can finally take a look at
