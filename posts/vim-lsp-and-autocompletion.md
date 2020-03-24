@@ -99,8 +99,9 @@ solution was a custom crafted system.
 This used to apply not only to autocompletion in Vim but to the completion
 engines overall.
 
-Unabatedly the most popular of this kind of solution is youcompleteme plugin.
-Another one of them is deoplete.
+Unabatedly the most popular of this kind of solution is the
+[youcompleteme](https://github.com/ycm-core/YouCompleteMe) plugin.
+Another one of them is [deoplete](https://github.com/Shougo/deoplete.nvim).
 These plugins provide features that you would expect of modern day IDE but
 they aren't perfect.
 As mentioned they are not standardised and seem too big.
