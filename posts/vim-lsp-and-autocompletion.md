@@ -26,7 +26,7 @@ just follow steps in this paragraph.
 1. Make sure you have a plugin manager for Vim. If you don't have one
    [Vim Plug](https://github.com/junegunn/vim-plug) is the best option.
 
-2. Install requires plugins. For Vim Plug you should put:
+2. Install required plugins. For Vim Plug you should put:
    ```vim
    Plug 'prabirshrestha/async.vim'
    Plug 'prabirshrestha/asyncomplete.vim'
@@ -66,9 +66,9 @@ just follow steps in this paragraph.
 While LSP is the most advanced way of achieving autocompletion (and much more)
 you may wonder why it requires so much hustle and what people used to use before
 LSP came about.
-Its also worth taking a look at the other solutions to understand the wild west of autocompletion as a whole.
+It's also worth taking a look at the other solutions to understand the wild west of autocompletion as a whole.
 
-The most rudimentary way of having autocompletion is the completion form the
+The most rudimentary way of having autocompletion is the completion from the
 current buffer (current file).
 This feature is built into Vim.
 This means that after you press ctrl+n Vim will autocomplete given word using
@@ -85,6 +85,8 @@ modern IDE.
 If you use omni completion with compiled languages like C you will have to
 create a ctags file which contains information about your code.
 It's fairly easy and requires you to run one command on your makefile.
+Ctags may be already installed on your system, if not you can get it
+from [here](https://ctags.io).
 When you have a ctags file in the project Vim will also enable you to jump
 tags and navigate code with motions like `ctr+[`.
 However omni completion isn't that great and still requires you to invoke it
@@ -94,7 +96,7 @@ manually when you want to complete.
 
 Since omni completion some more advanced autocompletion plugins have been
 developed.
-However because there had been no standard in the wold of code completion every
+However because there had been no standard in the world of code completion every
 solution was a custom crafted system.
 This used to apply not only to autocompletion in Vim but to the completion
 engines overall.
@@ -104,24 +106,24 @@ Unabatedly the most popular of this kind of solution is the
 Another one of them is [deoplete](https://github.com/Shougo/deoplete.nvim).
 These plugins provide features that you would expect of modern day IDE but
 they aren't perfect.
-As mentioned they are not standardised and seem too big.
+As mentioned they are not standardised and seem too big for my taste.
 I have used youcompleteme before and it wasn't bad but if you search for a
-while you can find bunch of people struggling with it's performance.
+while you can find a bunch of people struggling with its performance.
 
 ### LSP – state of art in autocompletion
 
-However in 2016 Microsoft announced their Language Server Protocol that would
-heavily impact future of Vim (yeah irony) and many other text editors.
+However in 2016 Microsoft announced itd Language Server Protocol that would
+heavily impact the future of Vim (yeah irony) and many other text editors.
 While LSP was developed (and is mainly used) for Visual Studio Code it is an
 open standard that introduces some order to the wild west of autocompletion.
 The protocol is a universal way of enabling code editors to communicate with a
 code analyser (proper name is Language Sever) that can provide them with
 advanced features including autocompletion and much more.
 LSP introduces standardization and enables client server architecture where each
-programming language is has a server and code editors are LSP clients.
+programming language has a server and code editors are LSP clients.
 
-This separates code editors from code analysis which is definitely better then
-having custom baked solution for every single editor you use.
+This separates code editors from code analysis which is definitely better than
+having custom baked solution for evry single editor you use.
 Using LSP you can choose which language servers you want to use and you your
 editor is not strictly bound to the way it gets code analysis.
 Other advantage of LSP is that you can easily switch servers for different
@@ -137,13 +139,13 @@ getting it going inside our instance of Vim.
 First plugin we need is [async](https://github.com/prabirshrestha/async.vim).
 Since Vim 8 (which started what we would call modern Vim) the editor is able
 to perform asynchronous job executions.
-That basically means that some plugins can perform tasks in the background and
-react to what is going on in Vim without user explicitly asking for some
+This basically means that some plugins can perform tasks in the background and
+react to what is going on in Vim without user having t oexplicitly ask for some
 actions.
 This is what we need for autocompletion to pop up automatically when we type.
-Your vim should be already above the 8.0 version, but make sure of it if you
+Your Vim should already be above the 8.0 version, but make sure of it if you
 want autocompletion to work.
-Then we need async plugin, even though Vim has asynchronous actions built in.
+Then we need an async plugin, even though Vim has asynchronous actions built in.
 Because Neovim has developed async separately from Vim it has a slightly
 different API.
 This plugin is required to normalize the APIs so developers can share their
@@ -157,16 +159,21 @@ That will make completion menu pop up automatically using async.
 This can be utilized not only with LSP autocompletion but also with previously
 mentioned buffer completion and omni completion.
 If you want asynchronous autocompletion with different source then LSP read more
-about it on the GitHub.
+about it on GitHub.
 
-Now we have to make the autocompletion use LSP protocol to make vim be able to
+Now we have to make the autocompletion use LSP protocol to make Vim be able to
 talk with language servers.
 There is another [plugin](https://github.com/prabirshrestha/vim-lsp) to make
 this work.
 
 There are some other plugins that make Vim be able to perform asynchronous
-completion from LSPs but the set of plugins shown here is written and vim
+completion from LSPs but the set of plugins shown here is written and Vim
 script, so it should have least dependencies.
+Other solutions are
+[LanguageClient-neovim](https://github.com/autozimu/LanguageClient-neovim)
+(uses Rust), [vim-lsc](https://github.com/natebosch/vim-lsc) (uses Vim script
+but seems to be less popular than vim-lsp).
+There are also some PRs for Neovim that will make it have LSP support built-in.
 
 The last step is to install language servers for our languages of choice.
 LSPs are normal computer programs that will talk to your editor when a code
@@ -176,13 +183,16 @@ You can check out the full list of LSPs on the
 then Vim).
 After a server is installed it usually requires a few (up to around ten)
 lines of config in `.vimrc` to register the server.
-However this is rather annoying part of LSPs in vim because configuring each
+However this is rather annoying part of LSPs in Rim because configuring each
 server by hand in Vim can be tiring and I feel like what we have already done
 is much of a hustle.
 Luckily there is a [plugin](https://github.com/mattn/vim-lsp-settings)
 for LSPs auto management for Vim.
-With it you can simply type `Lspserverisntall` and you will get a server for the
+With it you can simply type `:LspInstallServer` and you will get a server for the
 document you are currently editing.
+
+Another nice thing about the setup is that all of the plugins are developed by
+the same group of people so compatibilty is kept in mind.
 
 ## LSP with Python and C++
 
@@ -198,9 +208,25 @@ I also recommend putting this line in your `.vimrc`:
 By default LSP will try to find errors and warnings in your code.
 I don't like this much stuff happening so I disabled it.
 
+The default LSP for C++ is [clangd](https://clangd.llvm.org) from LLVM project.
+From my experience it works very well.
+When you install it using `LspInstallServer` it will ask if you want to install
+additional clang instance for vim or use the system one.
+Having extra clang may be annoying, but on the second thought it is much easier
+to maintaining the system if clangd has its own clang independent of your main
+one.
+
+The LSP for Python is [pyls](https://github.com/palantir/python-language-server).
+I would tell that is more buggy than clangd, however all LSPs are new so we have
+to give pyls some time to mature.
+Pyls is written in Python, however if you are ok with C# and Dotnet you may want
+to give [pyls-ms](https://github.com/microsoft/python-language-server) a try.
+This is the Pyton LSP that Visual Studio Code uses by the default.
+To get it you have to run `:LspInstallServer pyls-ms`.
+
 ## Even more features with Vista
 
-As mentioned LSPs can do much more then just autocompletion.
+As mentioned LSPs can do much more than just autocompletion.
 There is a plugin called [Vista](https://github.com/liuchengxu/vista.vim) that
 can give you nice code navigation with LSP.
 
