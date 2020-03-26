@@ -25,20 +25,19 @@ p {
 	margin: 0.5em 0 0.5em 0;
 }
 a { color: #414af0; text-decoration-thickness: 0.08em; }
-li { line-height: 1.5em;}
+li { }
 ul { padding-left: 3em; }
 ol { padding-left: 3em; }
-dl { line-height: 1.5em; }
+dl { }
 dt { font-weight: bold; }
 dd { font-style: italic; }
-hr { border: solid 0.5px; margin: 1.5em 0em; }
-figure { margin: 0.5em 0; padding: 0.5em; }
+hr { color: #bfbfbf; border: solid 0.05em; margin: 1.5em 0em; }
+figure { color: #646464; margin: 0.5em 0; padding: 0.5em; }
 figcaption { padding-top: 0.5em; font-style : italic; }
 img { }
 video { margin; 1em; }
 table { border-collapse: collapse; }
-tr { background-color: white;
-}
+tr { background-color: white; }
 tr:nth-child(2n) { background-color: #f9f9f9; }
 th {
 	font-weight: bold;
@@ -68,6 +67,7 @@ table{ max-width: 100%; overflow-x: auto; display: block; }
 @media only screen and (max-width: 600px)
 {
 	body { font-size: 0.9em; }
+	nav { display: flex; flex-direction: column; }
 }
 
 code span.al { color: #ff0000; font-weight: bold; }
