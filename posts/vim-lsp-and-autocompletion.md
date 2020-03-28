@@ -66,7 +66,8 @@ just follow steps in this paragraph.
 While LSP is the most advanced way of achieving autocompletion (and much more)
 you may wonder why it requires so much hustle and what people used to use before
 LSP came about.
-It's also worth taking a look at the other solutions to understand the wild west of autocompletion as a whole.
+It's also worth taking a look at the other solutions to understand the wild west
+of autocompletion as a whole.
 
 The most rudimentary way of having autocompletion is the completion from the
 current buffer (current file).
@@ -188,8 +189,8 @@ server by hand in Vim can be tiring and I feel like what we have already done
 is much of a hustle.
 Luckily there is a [plugin](https://github.com/mattn/vim-lsp-settings)
 for LSPs auto management for Vim.
-With it you can simply type `:LspInstallServer` and you will get a server for the
-document you are currently editing.
+With it you can simply type `:LspInstallServer` and you will get a server for
+the document you are currently editing.
 
 Another nice thing about the setup is that all of the plugins are developed by
 the same group of people so compatibilty is kept in mind.
@@ -216,7 +217,8 @@ Having extra clang may be annoying, but on the second thought it is much easier
 to maintaining the system if clangd has its own clang independent of your main
 one.
 
-The LSP for Python is [pyls](https://github.com/palantir/python-language-server).
+The LSP for Python is
+[pyls](https://github.com/palantir/python-language-server).
 I would tell that is more buggy than clangd, however all LSPs are new so we have
 to give pyls some time to mature.
 Pyls is written in Python, however if you are ok with C# and Dotnet you may want
@@ -232,7 +234,7 @@ can give you nice code navigation with LSP.
 
 ![Code navigation pane provided by Vista](https://github.com/maciejzj/website/blob/master/media/vim-lsp-and-autocompletion-vista.png?raw=true)
 
-After you install it with Plug i recommend putting these lines in your `.vimrc`.
+After you install it with Plug I recommend putting these lines in your `.vimrc`.
 ```vim
 let g:vista_executive_for = {
         \ 'cpp': 'vim_lsp',
