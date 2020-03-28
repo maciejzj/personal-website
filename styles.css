@@ -26,10 +26,10 @@ p {
 	margin: 0.5em 0 0.5em 0;
 }
 a { color: #414af0; text-decoration-thickness: 0.08em; }
-li { }
+li { line-height: 1.5em;}
 ul { padding-left: 3em; }
 ol { padding-left: 3em; }
-dl { }
+dl { line-height: 1.5em; }
 dt { font-weight: bold; }
 dd { font-style: italic; }
 hr { color: #bfbfbf; border: solid 0.05em; margin: 1.5em 0em; }
