@@ -1,4 +1,4 @@
-markdown_pages := index.md work.md
+markdown_pages := pages/index.md pages/work.md
 posts_dir := posts
 output_dir := docs
 
