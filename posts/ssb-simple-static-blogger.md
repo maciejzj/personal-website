@@ -41,19 +41,49 @@ post.
 
 ## Jump start
 
-1. A POSIX compliant shell and your favourite Markdown renderer (pandoc by
-   default) are required.
-2. Download `ssb` and place it in your `PATH` or inside your blog directory.
-3. Run `ssb -g` to generate html and css templates. Adjust the header and the
-   footer to your liking, you can customize the stylesheet, use a css theme,
+Ssb can be installed via homebrew with `homebrew install maciejzj/ssb/ssb` or
+just by grabbing the source code distribution and placing it in PATH
+(preferably using `install(1)`).
+
+1. Run `ssb -g` to generate html and css templates. Adjust the header and
+   the footer to your liking, you can customize the stylesheet, use a css theme,
    or your favourite style for Markdown.
-4. Write your `index.md` page and posts in `posts` directory.
-5. Run `ssb index.md` to generate `html` files. Ssb will append header, list of
-   posts and footer to each file.
-6. The timestamps near posts titles are generated from modification dates of
-   Markdown files.
-   If you wish to change them use the `touch` command.
-7. Publish your blog.
+2. Write your `index.md` page and some Markdown posts in `posts` directory.
+3. Run `ssb index.md` to generate `html` files. Ssb will append the header, the
+   list of posts and the footer to each file.
+4. The timestamps near posts titles are generated from modification dates of
+   Markdown files. If you wish to change them use the `touch` command (.e.g.
+   `touch -t YYMMDDhhmm`).
+5. Publish your blog.
+
+It is the most convenient to use `make` for creating sites with ssb. You can
+start by adjusting this started makefile:
+
+```makefile
+markdown_pages := index.md
+
+posts_dir := posts
+output_dir := docs
+
+markdown_posts := $(wildcard $(posts_dir)/*.md)
+
+# Main markdown pages
+generated_files := $(foreach page,$(markdown_pages),$(patsubst %.md,$(output_dir)/%.html,$(page)))
+# Append posts pages
+generated_files += $(foreach post,$(markdown_posts),$(patsubst $(posts_dir)/%.md,$(output_dir)/%.html,$(post)))
+
+.DEFAULT: compile
+
+compile: $(generated_files)
+
+$(generated_files): $(markdown_pages) $(markdown_posts)
+	ssb -p $(posts_dir) -o $(output_dir) $(markdown_pages)
+
+.PHONY: clean
+
+clean:
+	rm -f $(generated_files)
+```
 
 ## Goals, features and non-features
 
@@ -71,12 +101,46 @@ post.
 ## Help
 
 ```
-./ssb -h
-Usage: ./ssb [-d|-g|-h|-r] [-e HEADER_PATH] [-f FOOTER_PATH] [-m MD_RENDERER]
-                           [-o OUTPUT_DIR] [-p POSTS_DIR]
+ssb -h
+ssb - simple static blogger.
+
+Translates input markdown files to html pages. Attaches html header and
+footer to each output. Files from the posts directory are appended to a
+blog list at the end of each html.
+
+Usage: ssb [-d|-g|-h|-r] [-e HEADER_PATH] [-f FOOTER_PATH][-m MD_RENDERER]
+                         [-o OUTPUT_DIR] [-p POSTS_DIR] <MARKDOWN_FILES ...>
+
+Positional arguments:
+  MARKDOWN_FILES - Paths to arbitrary number of markdown files that will be
+  translated into html files but not appended to the posts list (but will still
+  display it at the bottom). It is intended to pass index.md here.
+
+Options:
+  -d Don't attach posts list to each html file.
+  -g Generate html templates for header, footer and stylesheet.
+  -h Show this help message.
+  -r Recurse the posts directory.
+  -v Be verbose (print each command being executed).
+
+  -e HEADER_PATH Path to a header html file (header.html by default).
+  -f FOOTER_PATH Path to a footer html file (footer.html by default).
+  -m MD_RENDERER Markdown renderer command name. Must be able to read
+     markdown form stdin and output html to stdout (pandoc by default).
+  -o OUTPUT_DIR Output directory for html files (. by default).
+  -p POSTS_DIR Path to a directory with markdown posts (posts by default).
+
+Usage tips:
+
+The timestamps near posts titles are generated from modification dates of
+Markdown files.
+
+If you wish to change them use the touch command (touch -t YYMMDDhhmm).
+
+Credentials: https://github.com/maciejzj/ssb
 ```
 
-## How to get it
+## How to get it and other tips
 
 If you want to give ssb a try you can get it from the GitHub
 [repo](https://github.com/MaciejZj/ssb).
