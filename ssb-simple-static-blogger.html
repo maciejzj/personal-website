@@ -1,31 +1,43 @@
 <!DOCTYPE html>
 <html lang=en>
-<head>
-	<meta charset="utf-8">
+	<head>
+		<meta charset="utf-8">
 
-	<title>Maciej Ziaja</title>
+		<title>Maciej Ziaja</title>
 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="styles.css">
-</head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
 
-<body>
-<header>
-<nav>
-	<strong>Maciej Ziaja</strong>
-	<a href="./index.html">home</a>
-	<a href="./projects.html">projects</a>
-	<a href="https://github.com/maciejzj">github</a>
-	<a href="https://gitlab.com/maciejzj">gitlab</a>
-	<a href="https://www.linkedin.com/in/maciej-ziaja-86a422184/">linkedin</a>
-	<a href="mailto:maciejzj@icloud.com">email</a>
-</nav>
-</header>
+	<body>
+		<header>
+			<h1>Maciej Ziaja</h1>
+			<nav>
+				<a href="./index.html">home</a>
+				<a href="./work.html">work</a>
+				<a href="https://github.com/maciejzj">github</a>
+				<a href="https://www.linkedin.com/in/maciej-ziaja-86a422184/">linkedin</a>
+				<a href="mailto:maciejzj@icloud.com">email</a>
+			</nav>
+		</header>
 
 <h1 id="simple-static-blogger">Simple static blogger</h1>
-<p>I decided to create this website to share my tech related work. However I discovered that the mainstream tools for blogging are not so great if you want to make a very simple and effortless website. Popular tools often seem to be too convoluted (there are Hugo tutorials on the Youtube that last dozens of minutes) for my use case. Surely, there are many great tools, but I wanted something bare-bones simple that would require no learning and have as few dependencies as possible. After a few minutes of research I decided to write my own blog framework in form of a shell script (there are some bash static site generators but I decided to make something even simpler and make my own thing for fun).</p>
-<p>This was my motivation for creating a simple static blogger - anti-framework for generating static sites and blogs that tries to follow suckless philosophy of creating software.</p>
-<p>Ssb is heavily inspired and based on <a href="https://benedicthenshaw.com/static_site.html">this</a> post.</p>
+<p>I decided to create this website to share my tech related work.
+However I discovered that the mainstream tools for blogging are not so
+great if you want to make a very simple and effortless website. Popular
+tools often seem to be too convoluted (there are Hugo tutorials on the
+Youtube that last dozens of minutes) for my use case. Surely, there are
+many great tools, but I wanted something bare-bones simple that would
+require no learning and have as few dependencies as possible. After a
+few minutes of research I decided to write my own blog framework in form
+of a shell script (there are some bash static site generators but I
+decided to make something even simpler and make my own thing for
+fun).</p>
+<p>This was my motivation for creating a simple static blogger -
+anti-framework for generating static sites and blogs that tries to
+follow suckless philosophy of creating software.</p>
+<p>Ssb is heavily inspired and based on <a
+href="https://benedicthenshaw.com/static_site.html">this</a> post.</p>
 <h2 id="generated-site-structure">Generated site structure</h2>
 <pre><code>+------------------------------+
 | Header and navbar            |
@@ -44,32 +56,51 @@
 +------------------------------+</code></pre>
 <h2 id="jump-start">Jump start</h2>
 <ol type="1">
-<li>A POSIX compliant shell and your favourite Markdown renderer (pandoc by default) are required.</li>
-<li>Download <code>ssb</code> and place it in your <code>PATH</code> or inside your blog directory.</li>
-<li>Run <code>ssb -g</code> to generate html and css templates. Adjust the header and the footer to your liking, you can customize the stylesheet, use a css theme, or your favourite style for Markdown.</li>
-<li>Write your <code>index.md</code> page and posts in <code>posts</code> directory.</li>
-<li>Run <code>ssb index.md</code> to generate <code>html</code> files. Ssb will append header, list of posts and footer to each file.</li>
-<li>The timestamps near posts titles are generated from modification dates of Markdown files. If you wish to change them use the <code>touch</code> command.</li>
+<li>A POSIX compliant shell and your favourite Markdown renderer (pandoc
+by default) are required.</li>
+<li>Download <code>ssb</code> and place it in your <code>PATH</code> or
+inside your blog directory.</li>
+<li>Run <code>ssb -g</code> to generate html and css templates. Adjust
+the header and the footer to your liking, you can customize the
+stylesheet, use a css theme, or your favourite style for Markdown.</li>
+<li>Write your <code>index.md</code> page and posts in
+<code>posts</code> directory.</li>
+<li>Run <code>ssb index.md</code> to generate <code>html</code> files.
+Ssb will append header, list of posts and footer to each file.</li>
+<li>The timestamps near posts titles are generated from modification
+dates of Markdown files. If you wish to change them use the
+<code>touch</code> command.</li>
 <li>Publish your blog.</li>
 </ol>
-<h2 id="goals-features-and-non-features">Goals, features and non-features</h2>
+<h2 id="goals-features-and-non-features">Goals, features and
+non-features</h2>
 <ul>
-<li>Ssb is a single POSIX compliant script that requires only a Markdown renderer to create blogs.</li>
-<li>It is not a <em>real framework</em>, just a hackable script to automate blogging and save your time.</li>
-<li>Useful as is without editing source, easily expandable source if you want.</li>
-<li>No tags, no artifacts, no Javascript, no learning, no lengthy setup.</li>
-<li>If you want a simple and effortless blogging engine ssb is perfect for you, whether you want something with more features you can hack it, or use frameworks like Jekyll or Hugo.</li>
-<li>Customization with direct editing of html header, footer and css stylesheet.</li>
+<li>Ssb is a single POSIX compliant script that requires only a Markdown
+renderer to create blogs.</li>
+<li>It is not a <em>real framework</em>, just a hackable script to
+automate blogging and save your time.</li>
+<li>Useful as is without editing source, easily expandable source if you
+want.</li>
+<li>No tags, no artifacts, no Javascript, no learning, no lengthy
+setup.</li>
+<li>If you want a simple and effortless blogging engine ssb is perfect
+for you, whether you want something with more features you can hack it,
+or use frameworks like Jekyll or Hugo.</li>
+<li>Customization with direct editing of html header, footer and css
+stylesheet.</li>
 </ul>
 <h2 id="help">Help</h2>
 <pre><code>./ssb -h
 Usage: ./ssb [-d|-g|-h|-r] [-e HEADER_PATH] [-f FOOTER_PATH] [-m MD_RENDERER]
                            [-o OUTPUT_DIR] [-p POSTS_DIR]</code></pre>
 <h2 id="how-to-get-it">How to get it</h2>
-<p>If you want to give ssb a try you can get it from the GitHub <a href="https://github.com/MaciejZj/ssb">repo</a>.</p>
-<p>Stylesheets for theming can be found <a href="https://github.com/maciejzj/ssb-themes">here</a>.</p>
+<p>If you want to give ssb a try you can get it from the GitHub <a
+href="https://github.com/MaciejZj/ssb">repo</a>.</p>
+<p>Stylesheets for theming can be found <a
+href="https://github.com/maciejzj/ssb-themes">here</a>.</p>
 <hr />
-<p>2020-03-24 – <a href="vim-lsp-and-autocompletion.html">Vim LSP and autocompletion</a><br> 2020-02-19 – <a href="ssb-simple-static-blogger.html">Simple static blogger</a><br></p>
+<p>2023-06-29 – <a href="ssb-simple-static-blogger.html">Simple static
+blogger</a><br></p>
 <footer>
 	Created with <a href="https://github.com/MaciejZj/ssb">ssb</a> – a simple
 	static blogger.
