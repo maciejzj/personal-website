@@ -84,7 +84,7 @@ deployment available [online](https://itjobsmeta.net).
 Late 2021
 
 Kalman filter based AHRS system implementation for embedded devices in form of a
-standalone library and an example use case with RaspberryPi and Pololu Minimu-9
+standalone library and an example use case with Raspberry Pi and Pololu Minimu-9
 v5.
 
 Used technologies:
@@ -93,10 +93,10 @@ Used technologies:
 * Google Test and Google Mock for unit testing.
 * CMake build system and GitLab Continuous Integration service.
 
-Sources avialable at GitHub for: Kalman filter
+Sources available at GitHub for: Kalman filter
 [library](https://github.com/maciejzj/kalman-ahrs), Minimu-9 device
 [reader](https://github.com/maciejzj/minimu) over I2C,
-[AHRS system](https://github.com/maciejzj/minimu-ahrs) on RaspberryPi
+[AHRS system](https://github.com/maciejzj/minimu-ahrs) on Raspberry Pi
 with Minimu-9.
 
 ### Software development system for Silesian Aerospace Systems students club
@@ -104,7 +104,7 @@ with Minimu-9.
 Mid 2021
 
 A setup of libraries, hardware abstraction code pieces, CI/CD and software
-quality tools as a base for aerospcae embedded devices development.
+quality tools as a base for aerospace embedded devices development.
 
 Used technologies:
 
@@ -157,7 +157,7 @@ Includes data sharing system in form of local web sockets.
 Used technologies:
 
 * Modern C++ with build based on Makefiles.
-* RaspberryPi hardware.
+* Raspberry Pi hardware.
 * ZMQ web socket library (more advanced MQTT competitor).
 * Spdlog logger with ftm format system.
 * Selected Boost libraries and C++ multithreading.
