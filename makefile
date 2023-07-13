@@ -1,13 +1,14 @@
 markdown_pages := pages/index.md pages/work.md
+pages_dir := pages
 posts_dir := posts
 output_dir := docs
 
 markdown_posts := $(wildcard $(posts_dir)/*.md)
 
 # Main markdown pages
-generated_files := $(output_dir)/$(markdown_pages:%.md=%.html)
+generated_files := $(foreach page,$(markdown_pages),$(patsubst pages/%.md,$(output_dir)/%.html,$(page)))
 # Append posts pages
-generated_files += $(output_dir)/$(patsubst $(posts_dir)/%.md,%.html,$(markdown_posts))
+generated_files += $(foreach post,$(markdown_posts),$(patsubst $(posts_dir)/%.md,$(output_dir)/%.html,$(post)))
 
 .DEFAULT: compile
 
