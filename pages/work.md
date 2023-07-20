@@ -16,7 +16,7 @@ I am a PhD student at Silesian University of Technology. I am researching deep
 learning applications for satellite imagery quality enhancement with emphasis on
 generalization capabilities and real-life performance in specific tasks.
 
-Keywords: *deeep learning*, *super-resolution*, *data-fusion*, *remote-sensing*,
+Keywords: *deep learning*, *super-resolution*, *data-fusion*, *remote-sensing*,
 *task-driven super-resolution*, *segmentation*.
 
 ### Publications and conferences
