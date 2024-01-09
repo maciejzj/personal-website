@@ -4,7 +4,7 @@
 	--grey: rgb(191, 191, 191);
 	--dark-grey: rgb(100, 100, 100);
 	--light-grey: rgb(249, 249, 249);
-	--blue-interactive: rgb(65, 74, 240);
+	--blue-interactive: rgb(97, 97, 247);
 }
 
 
@@ -49,7 +49,7 @@ p {
 
 a {
 	color: var(--blue-interactive);
-	text-decoration-thickness: 0.08em;
+	text-decoration: none;
 }
 
 li {
